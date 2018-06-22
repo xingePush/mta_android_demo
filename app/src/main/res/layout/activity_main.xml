@@ -6,13 +6,73 @@
     android:layout_height="match_parent"
     tools:context="com.tencent.mtademo.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="492dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
+        <Button
+            android:id="@+id/buttonCustomKVEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonCustomKVDuEv"
+            android:layout_alignBottom="@+id/buttonCustomKVDuEv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="61dp"
+            android:layout_marginStart="61dp"
+            android:text="自定义事件" />
+
+        <Button
+            android:id="@+id/buttonJavaCrash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonCustomKVEvent"
+            android:layout_alignStart="@+id/buttonCustomKVEvent"
+            android:layout_below="@+id/buttonCustomKVEvent"
+            android:layout_marginTop="30dp"
+            android:text="JavaCrash" />
+
+        <Button
+            android:id="@+id/buttonCustomKVDuEv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_marginTop="53dp"
+            android:text="时长事件" />
+
+        <Button
+            android:id="@+id/buttonJNICrash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonJavaCrash"
+            android:layout_alignBottom="@+id/buttonJavaCrash"
+            android:layout_alignLeft="@+id/buttonCustomKVDuEv"
+            android:layout_alignStart="@+id/buttonCustomKVDuEv"
+            android:text="JniCrash" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonJavaCrash"
+            android:layout_alignStart="@+id/buttonJavaCrash"
+            android:layout_below="@+id/buttonJavaCrash"
+            android:layout_marginTop="28dp"
+            android:text="跳转到登陆页" />
+
+        <Button
+            android:id="@+id/buttonMonitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonJNICrash"
+            android:layout_alignStart="@+id/buttonJNICrash"
+            android:layout_alignTop="@+id/buttonLogin"
+            android:text="接口监控" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
